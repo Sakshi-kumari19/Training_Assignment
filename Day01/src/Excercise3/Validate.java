@@ -1,3 +1,4 @@
+//Q3. Lambda Expression to to accept username and password and return true or false.
 package Excercise3;
 
 public class Validate {
@@ -14,3 +15,4 @@ public class Validate {
         System.out.println(check.login("sakshi","1234"));
     }
 }
+
