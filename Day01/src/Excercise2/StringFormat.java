@@ -1,3 +1,4 @@
+//Q2.Lambda expression to add space between each character of given string.
 package Excercise2;
 
 public class StringFormat {
@@ -14,3 +15,4 @@ public class StringFormat {
         System.out.println(st.addspace("row"));
     }
 }
+
