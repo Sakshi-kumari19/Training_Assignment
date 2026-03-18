@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context" xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"> <!-- bean definitions here -->
+
+    <context:annotation-config></context:annotation-config>
+        <bean id="jk" class="com.cg.bean.JKTyre"></bean>
+        <bean id="mrf" class="com.cg.bean.MrfTyre"></bean>
+        <bean id="petrol" class="com.cg.bean.PetrolEngine"></bean>
+        <bean id="cng" class="com.cg.bean.CNGEngine"></bean>
+        <bean id="car" class="com.cg.bean.Car">
+            <property name="name" value="Honda-city"></property>
+        </bean>
+
+
+
+    <!--    in this it will scan only those classes which have @Component annotation-->
+    <!--    @Component has three types: -->
+    <!--    1. @Service-->
+    <!--    2. @Repository-->
+    <!--    3. @Controller-->
+
+    <!--    There is no difference between all three but there names are different in order to use them in there defined layers-->
+
+<!--    <context:component-scan base-package="com.cg.bean"></context:component-scan>-->
+<!--<context:property-placeholder location="classpath:data.properties"></context:property-placeholder>-->
+
+</beans>

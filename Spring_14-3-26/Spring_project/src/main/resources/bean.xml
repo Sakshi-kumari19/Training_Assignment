@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context" xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"> <!-- bean definitions here -->
+    <!--To enable annotation-->
+    <context:annotation-config/>
+<!--        <bean id="hello" class="com.cg.bean.HelloWorld" scope="singleton">-->
+    <!--when obj is created IOC will inject the name attribute of class HelloWorld as Sakshi-->
+
+<!--                <property name="name" value="Sakshi"></property>-->
+                <!--<constructor-arg name="name" value="Sakshi"></constructor-arg>-->
+
+<!--                <property name="language">-->
+<!--                    <set>-->
+<!--                        <value>Hindi</value>-->
+<!--                        <value>English</value>-->
+<!--                        <value>Sanskrit</value>-->
+<!--                    </set>-->
+<!--                </property>-->
+<!--        </bean>-->
+<!--scope - prototype gives different objects (singleton,prototype,request,session)-->
+<!--<bean id="e" class="com.cg.bean.Employee">-->
+<!--    <property name="empid" value="1001"/>-->
+<!--    <property name="name" value="Jaladhi"/>-->
+<!--    <property name="address" ref="add"/>-->
+
+<!--<constructor-arg name="empid" value="1001"/>-->
+<!--<constructor-arg name="name" value="Sakshi"/>-->
+<!--<constructor-arg name="address" ref="add"/>-->
+
+<!--</bean>-->
+
+<!--<bean id="address" class="com.cg.bean.Address">-->
+<!--    <property name="city" value="Noida"/>-->
+<!--    <property name="country" value="India"/>-->
+<!--    <property name="zip" value="201306"/>-->
+<!--</bean>-->
+<!--    <bean id="add" class="com.cg.bean.Address">-->
+<!--        <property name="city" value="Greater Noida"/>-->
+<!--        <property name="country" value="India"/>-->
+<!--        <property name="zip" value="201310"/>-->
+<!--    </bean>-->
+    <context:component-scan base-package="com.cg.bean"></context:component-scan>
+    <context:property-placeholder location="classpath:data.properties"></context:property-placeholder>
+
+
+
+</beans>
+
+
+<!--Autowiring is used with field injection compulsorily ,but field injection is not recommended to use-->
+<!--Autowiring with constructor injection is not required-->
+<!--in constructor injection only one constructor is required ,either default or parametrized-->
