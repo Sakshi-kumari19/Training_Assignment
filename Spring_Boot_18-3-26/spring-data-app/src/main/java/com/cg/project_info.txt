@@ -1,0 +1,11 @@
+
+Main method --> send obj to service layer (EmployeeService.java) --> comm with DAO/Repo layer (repository is interface)
+Optional<T> in Java 8 is used to check null values.
+
+Employee e = es.getEmployee(9); it throws exception when getEmployee returns erepo.findById(id).get()
+The exception is happening because erepo.findById(id).get() is being called directly. In Spring Data JPA, findById(id)
+returns an Optional<Employee>.
+If the record with that ID doesn’t exist,
+the Optional is empty, and calling .get() on it throws a NoSuchElementException.
+
+https://docs.spring.io/spring-data/jpa/reference/jpa/query-methods.html  --> documentation
